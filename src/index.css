@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Picker Express Brand Kit — source: Frontify */
+    --background: 212 100% 97%;       /* Neutral 3 #F2F8FF */
+    --foreground: 229 35% 16%;        /* Azul Oscuro Forte #1A1F36 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 229 35% 16%;   /* Azul Oscuro Forte */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 229 35% 16%;
+
+    --primary: 229 35% 16%;           /* Azul Oscuro Forte #1A1F36 */
+    --primary-foreground: 212 100% 97%;
+
+    --secondary: 214 33% 91%;         /* Neutral 2 #E1E8F1 */
+    --secondary-foreground: 229 35% 16%;
+
+    --muted: 216 30% 93%;             /* Neutral 1 #D3DFEE */
+    --muted-foreground: 222 18% 38%;  /* Azul Oscuro 2 #6E7B9C */
+
+    --accent: 162 100% 44%;           /* Verde #00DE9B */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 346 100% 63%;      /* Rojo #FF426F */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 33% 91%;            /* Neutral 2 #E1E8F1 */
+    --input: 214 33% 91%;
+    --ring: 193 100% 45%;             /* Celeste #00B2E3 */
+
+    --radius: 0.75rem;
+
+    /* Picker brand tokens */
+    --picker-celeste: 193 100% 45%;   /* #00B2E3 */
+    --picker-celeste-1: 195 100% 86%; /* #B6EFFF */
+    --picker-celeste-2: 195 100% 97%; /* #F0FCFF */
+    --picker-verde: 162 100% 44%;     /* #00DE9B */
+    --picker-morado: 231 100% 71%;    /* #6C84FF */
+    --picker-azul: 211 100% 56%;      /* #2194FF */
+    --warning: 43 100% 67%;           /* Amarillo #FFD059 */
+    --warning-foreground: 229 35% 16%;
+    --success: 162 100% 44%;          /* Verde #00DE9B */
+    --success-foreground: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 193 100% 45%;
+  }
+
+  .dark {
+    --background: 229 35% 16%;
+    --foreground: 212 100% 97%;
+
+    --card: 229 35% 19%;
+    --card-foreground: 212 100% 97%;
+
+    --popover: 229 35% 19%;
+    --popover-foreground: 212 100% 97%;
+
+    --primary: 212 100% 97%;
+    --primary-foreground: 229 35% 16%;
+
+    --secondary: 229 25% 22%;
+    --secondary-foreground: 212 100% 97%;
+
+    --muted: 229 25% 22%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 162 100% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 346 80% 45%;
+    --destructive-foreground: 212 100% 97%;
+
+    --border: 229 25% 22%;
+    --input: 229 25% 22%;
+    --ring: 193 100% 45%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 193 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 193 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .slide-container {
+    @apply min-h-screen w-full flex flex-col items-center justify-center p-8 md:p-16 relative overflow-hidden;
+  }
+
+  .slide-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight;
+  }
+
+  .slide-subtitle {
+    @apply text-xl md:text-2xl text-muted-foreground font-light mb-8;
+  }
+
+  .stat-card {
+    @apply bg-card rounded-2xl p-6 md:p-8 shadow-lg border border-border;
+  }
+
+  .stat-value {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+
+  .stat-label {
+    @apply text-sm md:text-base text-muted-foreground uppercase tracking-wider mt-2;
+  }
+
+  .comparison-bar {
+    @apply h-12 md:h-16 rounded-xl transition-all duration-700 ease-out flex items-center px-4;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .picker-highlight {
+    color: hsl(var(--picker-celeste));
+    @apply font-semibold;
+  }
+
+  .uber-text {
+    @apply text-muted-foreground;
+  }
+
+  .benefit-pill {
+    background: hsl(var(--picker-celeste) / 0.1);
+    color: hsl(var(--picker-celeste));
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm;
+  }
+
+  .slide-indicator {
+    @apply w-2 h-2 rounded-full transition-all duration-300;
+  }
+
+  .slide-indicator-active {
+    background: hsl(var(--picker-celeste));
+    @apply w-8;
+  }
+
+  .slide-indicator-inactive {
+    @apply bg-border hover:bg-muted-foreground/50;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 0.7s ease-out forwards;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
