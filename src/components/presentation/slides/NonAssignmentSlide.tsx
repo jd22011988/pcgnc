@@ -1,4 +1,4 @@
-import { TrendingUp, Truck, Receipt } from "lucide-react";
+import { TrendingUp, Truck, Receipt, Zap } from "lucide-react";
 
 export const NonAssignmentSlide = () => {
   return (
@@ -6,13 +6,13 @@ export const NonAssignmentSlide = () => {
       <div className="max-w-6xl w-full">
         <div className="text-center mb-12">
           <span className="benefit-pill mb-6 opacity-0 animate-fade-up">
-            Beneficio #1
+            Fase 1 — Inmediato
           </span>
           <h1 className="slide-title opacity-0 animate-fade-up animation-delay-100">
-            Ahorra <span className="picker-highlight">35.4M COP</span>/mes
+            Ahorra <span className="picker-highlight">132M COP</span>/mes
           </h1>
           <p className="slide-subtitle opacity-0 animate-fade-up animation-delay-200">
-            Ruteo inteligente: mas volumen a tu flota, menos a Rappi
+            La flota ya esta pagada — cada entrega que absorbe de Rappi es ahorro puro
           </p>
         </div>
 
@@ -20,21 +20,21 @@ export const NonAssignmentSlide = () => {
           {/* Utilization Chart */}
           <div className="stat-card opacity-0 animate-fade-up animation-delay-300">
             <h3 className="text-lg font-semibold text-foreground mb-8">
-              Utilizacion de Flota
+              Volumen de Flota
             </h3>
 
             <div className="space-y-6">
               <div>
                 <div className="flex justify-between mb-2">
                   <span className="text-muted-foreground">Hoy (sin Picker)</span>
-                  <span className="font-semibold text-destructive">35%</span>
+                  <span className="font-semibold text-foreground">65% — 32,500</span>
                 </div>
                 <div className="h-12 bg-secondary rounded-xl overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-destructive/80 to-destructive rounded-xl flex items-center justify-end pr-4 animate-slide-right"
-                    style={{ width: '35%', animationDelay: '500ms' }}
+                    className="h-full bg-gradient-to-r from-primary/60 to-primary rounded-xl flex items-center justify-end pr-4 animate-slide-right"
+                    style={{ width: '65%', animationDelay: '500ms' }}
                   >
-                    <span className="text-sm font-medium text-white">17,500</span>
+                    <span className="text-sm font-medium text-white">5.2/dia</span>
                   </div>
                 </div>
               </div>
@@ -42,14 +42,14 @@ export const NonAssignmentSlide = () => {
               <div>
                 <div className="flex justify-between mb-2">
                   <span className="text-muted-foreground">Con Picker</span>
-                  <span className="font-semibold text-accent">54%</span>
+                  <span className="font-semibold text-accent">95% — 47,500</span>
                 </div>
                 <div className="h-12 bg-secondary rounded-xl overflow-hidden">
                   <div
                     className="h-full bg-gradient-to-r from-accent/80 to-accent rounded-xl flex items-center justify-end pr-4 animate-slide-right"
-                    style={{ width: '54%', animationDelay: '700ms' }}
+                    style={{ width: '95%', animationDelay: '700ms' }}
                   >
-                    <span className="text-sm font-medium text-white">27,000</span>
+                    <span className="text-sm font-medium text-white">7.5/dia</span>
                   </div>
                 </div>
               </div>
@@ -61,8 +61,8 @@ export const NonAssignmentSlide = () => {
                   <TrendingUp className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Entregas movidas a flota</p>
-                  <p className="text-xl font-bold text-accent">+9,500/mes</p>
+                  <p className="text-sm text-muted-foreground">Entregas absorbidas de Rappi</p>
+                  <p className="text-xl font-bold text-accent">+15,000/mes</p>
                 </div>
               </div>
             </div>
@@ -80,11 +80,11 @@ export const NonAssignmentSlide = () => {
                     Costo unitario flota
                   </p>
                   <div className="flex items-baseline gap-2 mt-1">
-                    <span className="text-lg text-muted-foreground line-through">8,057</span>
-                    <span className="text-3xl font-bold text-foreground">5,222</span>
+                    <span className="text-lg text-muted-foreground line-through">18,222</span>
+                    <span className="text-3xl font-bold text-foreground">12,468</span>
                     <span className="text-sm text-muted-foreground">COP</span>
                   </div>
-                  <p className="text-sm text-accent font-medium mt-1">-35% por entrega</p>
+                  <p className="text-sm text-accent font-medium mt-1">-32% por entrega</p>
                 </div>
               </div>
             </div>
@@ -99,11 +99,11 @@ export const NonAssignmentSlide = () => {
                     Factura Rappi
                   </p>
                   <div className="flex items-baseline gap-2 mt-1">
-                    <span className="text-lg text-muted-foreground line-through">292M</span>
-                    <span className="text-3xl font-bold text-foreground">231M</span>
+                    <span className="text-lg text-muted-foreground line-through">154M</span>
+                    <span className="text-3xl font-bold text-foreground">22M</span>
                     <span className="text-sm text-muted-foreground">COP/mes</span>
                   </div>
-                  <p className="text-sm text-accent font-medium mt-1">-21% en facturacion</p>
+                  <p className="text-sm text-accent font-medium mt-1">-86% en facturacion</p>
                 </div>
               </div>
             </div>
@@ -112,8 +112,12 @@ export const NonAssignmentSlide = () => {
               className="bg-gradient-to-r from-accent to-accent/80 rounded-2xl p-6 text-white opacity-0 animate-scale-in"
               style={{ animationDelay: '800ms' }}
             >
-              <p className="text-sm font-medium opacity-90">Ahorro neto mensual (incluye fee Picker)</p>
-              <p className="text-4xl font-bold mt-2">+35.4M COP</p>
+              <div className="flex items-center gap-2 mb-1">
+                <Zap className="w-5 h-5" />
+                <p className="text-sm font-medium opacity-90">Ahorro neto en Rappi (inmediato)</p>
+              </div>
+              <p className="text-4xl font-bold mt-2">+132M COP</p>
+              <p className="text-sm opacity-75 mt-1">Sin tocar headcount — la flota ya esta pagada</p>
             </div>
           </div>
         </div>
@@ -121,8 +125,8 @@ export const NonAssignmentSlide = () => {
         <div className="text-center opacity-0 animate-fade-up" style={{ animationDelay: '900ms' }}>
           <p className="text-lg text-muted-foreground">
             <span className="font-semibold text-foreground">¿Como?</span> Picker
-            Flows evalua distancia y asigna automaticamente: {"<"}5km → flota, {">"}5km → Rappi.
-            Tope conservador: 18 entregas/dia por repartidor.
+            Flows rutea por distancia: {"<"}5km → flota, {">"}5km → Rappi.
+            Solo el 5% de overflow queda en Rappi (2,500 entregas).
           </p>
         </div>
       </div>

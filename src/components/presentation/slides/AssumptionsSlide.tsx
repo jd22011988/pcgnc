@@ -1,20 +1,20 @@
-import { ClipboardCheck, Truck, Receipt, ShoppingCart, Route, Clock, AlertTriangle } from "lucide-react";
+import { ClipboardCheck, Truck, Receipt, ShoppingCart, Route, Clock, Users } from "lucide-react";
 
 export const AssumptionsSlide = () => {
   const operationalAssumptions = [
     { label: "Entregas totales/mes", value: "50,000", icon: ShoppingCart },
-    { label: "Split actual", value: "35% flota / 65% Rappi", icon: Route },
-    { label: "Repartidores internos", value: "~50", icon: Truck },
-    { label: "Costo por repartidor/mes", value: "2,820,000 COP", icon: Receipt },
-    { label: "Entregas hoy/dia/repartidor", value: "~12", icon: Clock },
+    { label: "Split actual", value: "65% flota / 35% Rappi", icon: Route },
+    { label: "Repartidores internos", value: "~210", icon: Users },
+    { label: "Costo por repartidor/mes", value: "2,820,000 COP + motos", icon: Receipt },
+    { label: "Entregas hoy/dia/repartidor", value: "~5.2", icon: Clock },
   ];
 
   const financialAssumptions = [
-    { label: "Costo total flota (fijo)", value: "141M COP/mes" },
+    { label: "Costo total flota (fijo)", value: "592.2M COP/mes" },
+    { label: "Costo unitario flota", value: "18,222 COP/entrega" },
     { label: "Fee delivery al cliente", value: "4,000 COP/orden" },
-    { label: "Tarifa Rappi (<3km)", value: "7,000 COP" },
-    { label: "Tarifa Rappi (3-5km)", value: "10,600 COP" },
-    { label: "Tarifa Rappi (>5km)", value: "14,200 COP" },
+    { label: "Rappi promedio ponderado", value: "~8,800 COP/entrega" },
+    { label: "Factura Rappi actual", value: "154M COP/mes" },
   ];
 
   const incidentAssumptions = [
@@ -32,10 +32,10 @@ export const AssumptionsSlide = () => {
             Base del Analisis
           </span>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 opacity-0 animate-fade-up animation-delay-100">
-            Supuestos a <span className="picker-highlight">validar</span>
+            Datos <span className="picker-highlight">confirmados</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground opacity-0 animate-fade-up animation-delay-200">
-            Los numeros de esta propuesta se basan en la siguiente informacion
+            Numeros validados en la sesion del 11 de febrero
           </p>
         </div>
 
@@ -99,18 +99,18 @@ export const AssumptionsSlide = () => {
           </div>
         </div>
 
-        {/* Fleet capacity callout */}
-        <div className="mt-4 stat-card p-4 border-2 border-warning/30 opacity-0 animate-fade-up" style={{ animationDelay: '650ms' }}>
+        {/* Fleet productivity callout */}
+        <div className="mt-4 stat-card p-4 border-2 border-destructive/30 opacity-0 animate-fade-up" style={{ animationDelay: '650ms' }}>
           <div className="flex items-start gap-3">
-            <div className="w-9 h-9 rounded-lg bg-warning/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <AlertTriangle className="w-5 h-5 text-warning" />
+            <div className="w-9 h-9 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <Truck className="w-5 h-5 text-destructive" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-foreground">Capacidad de flota: tope conservador de 18 entregas/dia</p>
+              <p className="text-sm font-semibold text-foreground">Productividad de flota: 5.2 entregas/dia por repartidor</p>
               <p className="text-xs text-muted-foreground mt-1">
-                Hoy cada repartidor hace <span className="font-semibold text-foreground">~12 entregas/dia</span>.
-                Estimamos un tope realista de <span className="font-semibold text-foreground">18/dia</span> (1 cada 27 min).
-                Eso da una capacidad maxima de flota de <span className="font-semibold text-foreground">27,000 entregas/mes</span> (54% del volumen).
+                El estandar de la industria es <span className="font-semibold text-foreground">12-18 entregas/dia</span>.
+                La flota esta rindiendo a <span className="font-semibold text-destructive">menos de un tercio</span> de su potencial.
+                Con 210 repartidores a 18/dia, la capacidad real es <span className="font-semibold text-foreground">113,400/mes</span> — mas del doble de lo necesario.
               </p>
             </div>
           </div>
@@ -119,7 +119,7 @@ export const AssumptionsSlide = () => {
         <div className="mt-4 text-center opacity-0 animate-fade-up" style={{ animationDelay: '750ms' }}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-xl">
             <p className="text-sm text-muted-foreground">
-              Todos los supuestos son ajustables — los numeros finales se recalculan con datos reales de Pasteur
+              Costo logistico total actual: <span className="font-semibold text-foreground">746.2M COP/mes</span> (592M flota + 154M Rappi)
             </p>
           </div>
         </div>

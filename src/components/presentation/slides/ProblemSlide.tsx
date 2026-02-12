@@ -1,24 +1,24 @@
-import { TrendingDown, Truck, Receipt } from "lucide-react";
+import { TrendingDown, Truck, Receipt, Clock } from "lucide-react";
 
 export const ProblemSlide = () => {
   const problems = [
     {
+      icon: Clock,
+      title: "5.2 entregas por dia",
+      description: "210 repartidores produciendo un tercio de lo esperado (estandar: 12-18/dia)",
+      loss: "Capacidad ociosa de 113,400 entregas/mes",
+    },
+    {
       icon: Truck,
-      title: "Flota subutilizada",
-      description: "50 repartidores moviendo solo el 35% del volumen",
-      loss: "8,057 COP/entrega — mas cara que Rappi",
+      title: "18,222 COP por entrega",
+      description: "El costo unitario de la flota es el doble que Rappi (~8,800 COP)",
+      loss: "592.2M COP/mes de nomina + motos",
     },
     {
       icon: Receipt,
-      title: "Factura Rappi elevada",
-      description: "El 65% del volumen va a Rappi innecesariamente",
-      loss: "292M COP/mes en logistica externa",
-    },
-    {
-      icon: TrendingDown,
-      title: "Costo fijo mal distribuido",
-      description: "141M COP/mes de nomina entre muy pocas entregas",
-      loss: "Mismo gasto, menos eficiencia",
+      title: "154M COP en Rappi",
+      description: "17,500 entregas externalizadas a pesar de tener flota con capacidad de sobra",
+      loss: "35% del volumen sale a proveedor externo",
     },
   ];
 
@@ -27,14 +27,14 @@ export const ProblemSlide = () => {
       <div className="max-w-6xl w-full">
         <div className="text-center mb-16">
           <span className="benefit-pill mb-6 opacity-0 animate-fade-up">
-            El Problema Oculto
+            El Diagnostico
           </span>
           <h1 className="slide-title opacity-0 animate-fade-up animation-delay-100">
-            Tu flota propia te cuesta{" "}
-            <span className="text-destructive">mas que Rappi</span>
+            Una flota de 210 que rinde como{" "}
+            <span className="text-destructive">70</span>
           </h1>
           <p className="slide-subtitle opacity-0 animate-fade-up animation-delay-200">
-            Un activo fijo de 141M COP/mes que no esta rindiendo lo que deberia
+            746.2M COP/mes en logistica con una productividad de 5.2 entregas/dia
           </p>
         </div>
 
@@ -65,8 +65,10 @@ export const ProblemSlide = () => {
 
         <div className="mt-12 text-center opacity-0 animate-fade-up" style={{ animationDelay: '700ms' }}>
           <p className="text-2xl md:text-3xl font-light text-muted-foreground">
-            Costo neto logistico actual:{" "}
-            <span className="font-bold text-destructive">232.8M COP/mes</span>
+            Cada entrega a Rappi cuesta{" "}
+            <span className="font-bold text-foreground">8,800 COP</span>
+            {" "}— pero la flota ya pagada cuesta{" "}
+            <span className="font-bold text-destructive">18,222 COP</span>
           </p>
         </div>
       </div>

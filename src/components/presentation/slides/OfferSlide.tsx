@@ -2,7 +2,7 @@ import { Check, ArrowRight, Shield, Zap } from "lucide-react";
 
 export const OfferSlide = () => {
   const features = [
-    "500 COP por envio orquestado",
+    "400 COP por envio (Fase 1) · 800 COP (Fase 2)",
     "$0 de setup — sin costo de implementacion",
     "Sin compromiso minimo (sin lock-in)",
     "Modulo Flows: ruteo automatico por distancia",
@@ -54,7 +54,7 @@ export const OfferSlide = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3 bg-secondary rounded-xl">
                 <span className="text-muted-foreground text-sm">Pagas</span>
-                <span className="text-lg font-bold text-primary">25.0M COP/mes</span>
+                <span className="text-lg font-bold text-primary">20.0M COP/mes</span>
               </div>
 
               <div className="flex justify-center">
@@ -62,13 +62,14 @@ export const OfferSlide = () => {
               </div>
 
               <div className="flex items-center justify-between p-3 bg-accent/10 rounded-xl">
-                <span className="text-muted-foreground text-sm">Recuperas</span>
-                <span className="text-lg font-bold text-accent">72.9M COP/mes</span>
+                <span className="text-muted-foreground text-sm">Ahorras (Fase 1)</span>
+                <span className="text-lg font-bold text-accent">139.1M COP/mes</span>
               </div>
 
               <div className="pt-3 border-t border-border text-center">
-                <p className="text-xs text-muted-foreground mb-1">Ganancia neta mensual</p>
-                <p className="text-3xl font-bold text-accent">+47.9M COP</p>
+                <p className="text-xs text-muted-foreground mb-1">Ganancia neta mensual (Fase 1)</p>
+                <p className="text-3xl font-bold text-accent">+119.1M COP</p>
+                <p className="text-xs text-muted-foreground mt-2">Fase 2 (flota optimizada): hasta +414.6M COP/mes</p>
               </div>
             </div>
           </div>
