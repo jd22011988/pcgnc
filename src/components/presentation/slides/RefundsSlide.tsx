@@ -1,37 +1,51 @@
-import { Users, ArrowRight, TrendingDown } from "lucide-react";
+import { ShieldCheck, ArrowRight, RefreshCcw, TrendingUp } from "lucide-react";
 
 export const RefundsSlide = () => {
   return (
-    <div className="slide-container bg-background py-8 md:py-12">
+    <div className="slide-container bg-background py-6 md:py-10">
       <div className="max-w-5xl w-full">
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <span className="benefit-pill mb-4 opacity-0 animate-fade-up">
-            Fase 2 — Optimizacion de Flota
+            Beneficio 2 — Ingresos Recuperados
           </span>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 opacity-0 animate-fade-up animation-delay-100">
-            De 210 a <span className="picker-highlight">~80 repartidores</span>
+            Recupera <span className="picker-highlight">$74,300 MXN</span>/mes
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground opacity-0 animate-fade-up animation-delay-200">
-            Misma demanda, flota 3x mas productiva + Rappi solo para desborde
+            Cascada automatica + 95% de recovery en incidencias
           </p>
         </div>
 
         {/* Before → After */}
-        <div className="grid md:grid-cols-[1fr,auto,1fr] gap-4 items-center mb-8">
+        <div className="grid md:grid-cols-[1fr,auto,1fr] gap-4 items-center mb-6">
           {/* Hoy */}
           <div className="stat-card p-5 opacity-0 animate-fade-up animation-delay-300">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-xl bg-muted flex items-center justify-center">
-                <Users className="w-5 h-5 text-muted-foreground" />
+                <ShieldCheck className="w-5 h-5 text-muted-foreground" />
               </div>
               <div>
                 <p className="font-semibold text-foreground">Hoy</p>
-                <p className="text-xs text-muted-foreground">210 drivers · 5.2/dia</p>
+                <p className="text-xs text-muted-foreground">Solo Rappi · sin plan B</p>
               </div>
             </div>
-            <div className="text-center py-4">
-              <p className="text-3xl font-bold text-destructive">746.2M</p>
-              <p className="text-sm text-muted-foreground">COP/mes total</p>
+            <div className="space-y-3">
+              <div className="flex justify-between items-center py-2 border-b border-border">
+                <span className="text-xs text-muted-foreground">Entregas fallidas (3.82%)</span>
+                <span className="text-sm font-bold text-destructive">180/mes</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-border">
+                <span className="text-xs text-muted-foreground">Retornos (5%)</span>
+                <span className="text-sm font-bold text-destructive">236/mes</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-border">
+                <span className="text-xs text-muted-foreground">Recovery rate (directo)</span>
+                <span className="text-sm font-bold text-destructive">~50%</span>
+              </div>
+              <div className="flex justify-between items-center py-2">
+                <span className="text-xs text-muted-foreground">Ingresos en riesgo</span>
+                <span className="text-sm font-bold text-destructive">$95,200</span>
+              </div>
             </div>
           </div>
 
@@ -41,37 +55,90 @@ export const RefundsSlide = () => {
             <ArrowRight className="w-6 h-6 text-accent rotate-90 md:hidden" />
           </div>
 
-          {/* Fase 2 */}
+          {/* Con Picker */}
           <div className="stat-card p-5 border-2 border-accent/30 opacity-0 animate-fade-up animation-delay-400">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
-                <TrendingDown className="w-5 h-5 text-accent" />
+                <RefreshCcw className="w-5 h-5 text-accent" />
               </div>
               <div>
-                <p className="font-semibold text-foreground">Fase 2</p>
-                <p className="text-xs text-accent">~80 drivers · 17.7/dia</p>
+                <p className="font-semibold text-foreground">Con Picker</p>
+                <p className="text-xs text-accent">Cascada + recovery 95%</p>
               </div>
             </div>
-            <div className="text-center py-4">
-              <p className="text-3xl font-bold text-accent">331.6M</p>
-              <p className="text-sm text-muted-foreground">COP/mes total</p>
+            <div className="space-y-3">
+              <div className="flex justify-between items-center py-2 border-b border-border">
+                <span className="text-xs text-muted-foreground">Entregas fallidas (-60%)</span>
+                <span className="text-sm font-bold text-accent">~72/mes</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-border">
+                <span className="text-xs text-muted-foreground">Retornos (-30%)</span>
+                <span className="text-sm font-bold text-accent">~165/mes</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-border">
+                <span className="text-xs text-muted-foreground">Recovery rate Picker</span>
+                <span className="text-sm font-bold text-accent">95%</span>
+              </div>
+              <div className="flex justify-between items-center py-2">
+                <span className="text-xs text-muted-foreground">Ingresos en riesgo</span>
+                <span className="text-sm font-bold text-accent">$20,900</span>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Savings highlight */}
-        <div className="bg-gradient-to-r from-accent to-accent/80 rounded-2xl p-6 text-white text-center opacity-0 animate-scale-in animation-delay-500 mb-6">
-          <p className="text-sm font-medium opacity-80 mb-1">Ahorro mensual vs hoy</p>
-          <p className="text-4xl md:text-5xl font-bold">-414.6M COP</p>
+        <div className="bg-gradient-to-r from-accent to-accent/80 rounded-2xl p-6 text-white text-center opacity-0 animate-scale-in animation-delay-500 mb-5">
+          <p className="text-sm font-medium opacity-80 mb-1">Ingresos recuperados por mes</p>
+          <p className="text-4xl md:text-5xl font-bold">+$74,300 MXN</p>
           <p className="text-sm opacity-75 mt-2">
-            130 drivers menos · Rappi solo 15% desborde · Picker a 800 COP
+            Cascada: +$57,200 · Recovery rate 95%: +$17,100 adicional
           </p>
         </div>
 
-        {/* Footnote */}
-        <p className="text-center text-sm text-muted-foreground opacity-0 animate-fade-up animation-delay-500">
-          Transicion gradual — attrition natural + redeployment a nuevos PDVs
-        </p>
+        {/* How it works */}
+        <div className="grid md:grid-cols-2 gap-3 opacity-0 animate-fade-up" style={{ animationDelay: '650ms' }}>
+          <div className="stat-card p-4">
+            <h4 className="text-sm font-semibold text-foreground mb-2">Cascada automatica</h4>
+            <div className="space-y-1.5 text-xs">
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                <span className="text-muted-foreground">Proveedor primario no acepta</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                <span className="text-muted-foreground">Siguiente proveedor toma en {"<"}2 min</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                <span className="text-muted-foreground">El cliente nunca se entera del cambio</span>
+              </div>
+            </div>
+          </div>
+          <div className="stat-card p-4">
+            <h4 className="text-sm font-semibold text-foreground mb-2">Recovery rate</h4>
+            <div className="space-y-2">
+              <div>
+                <div className="flex justify-between text-xs mb-1">
+                  <span className="text-muted-foreground">Cliente directo</span>
+                  <span className="font-semibold text-destructive">~50%</span>
+                </div>
+                <div className="w-full bg-muted rounded-full h-2">
+                  <div className="bg-destructive/40 h-2 rounded-full" style={{ width: '50%' }}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between text-xs mb-1">
+                  <span className="text-muted-foreground">Con Picker</span>
+                  <span className="font-semibold text-accent">95%</span>
+                </div>
+                <div className="w-full bg-muted rounded-full h-2">
+                  <div className="bg-accent h-2 rounded-full" style={{ width: '95%' }}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

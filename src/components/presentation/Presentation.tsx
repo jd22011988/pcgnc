@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { TitleSlide } from "./slides/TitleSlide";
 import { AssumptionsSlide } from "./slides/AssumptionsSlide";
 import { ProblemSlide } from "./slides/ProblemSlide";
+import { SolutionSlide } from "./slides/SolutionSlide";
 import { NonAssignmentSlide } from "./slides/NonAssignmentSlide";
 import { RefundsSlide } from "./slides/RefundsSlide";
 import { ROISlide } from "./slides/ROISlide";
@@ -16,8 +17,9 @@ const slides = [
   { component: TitleSlide, key: "title" },
   { component: AssumptionsSlide, key: "assumptions" },
   { component: ProblemSlide, key: "problem" },
-  { component: NonAssignmentSlide, key: "flows" },
-  { component: RefundsSlide, key: "incidents" },
+  { component: SolutionSlide, key: "solution" },
+  { component: NonAssignmentSlide, key: "savings" },
+  { component: RefundsSlide, key: "cascade" },
   { component: ROISlide, key: "roi" },
   { component: OfferSlide, key: "offer" },
   { component: ClientsSlide, key: "clients" },

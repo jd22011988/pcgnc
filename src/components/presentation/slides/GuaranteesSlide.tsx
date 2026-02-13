@@ -13,7 +13,7 @@ export const GuaranteesSlide = () => {
             Garantias Picker
           </h1>
           <p className="text-lg md:text-xl font-light opacity-80 opacity-0 animate-fade-up animation-delay-200">
-            Cero riesgo para Pasteur
+            Cero riesgo para GNC
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export const GuaranteesSlide = () => {
                 Devolucion total del fee de Picker
               </h3>
               <p className="text-muted-foreground">
-                En caso de que Pasteur no este satisfecho con el servicio, se devuelve el 100% del fee cobrado por Picker.
+                En caso de que GNC no este satisfecho con el servicio, se devuelve el 100% del fee cobrado por Picker.
                 <span className="font-medium text-foreground"> No incluye valor de envios — solo el fee de orquestacion.</span>
               </p>
               <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10">
@@ -61,7 +61,7 @@ export const GuaranteesSlide = () => {
 
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 opacity-0 animate-fade-up" style={{ animationDelay: '600ms' }}>
             <ShieldCheck className="w-8 h-8 mb-3 opacity-80" />
-            <h4 className="font-semibold mb-1">Datos son de Pasteur</h4>
+            <h4 className="font-semibold mb-1">Datos son de GNC</h4>
             <p className="text-sm opacity-75">
               100% propiedad del cliente. Exportables en cualquier momento, sin restricciones.
             </p>

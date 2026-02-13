@@ -1,26 +1,27 @@
-import { ClipboardCheck, Truck, Receipt, ShoppingCart, Route, Clock, Users } from "lucide-react";
+import { ClipboardCheck, ShoppingCart, Route, Receipt, AlertTriangle, Store, Phone, Clock, MapPin } from "lucide-react";
 
 export const AssumptionsSlide = () => {
   const operationalAssumptions = [
-    { label: "Entregas totales/mes", value: "50,000", icon: ShoppingCart },
-    { label: "Split actual", value: "65% flota / 35% Rappi", icon: Route },
-    { label: "Repartidores internos", value: "~210", icon: Users },
-    { label: "Costo por repartidor/mes", value: "2,820,000 COP + motos", icon: Receipt },
-    { label: "Entregas hoy/dia/repartidor", value: "~5.2", icon: Clock },
+    { label: "Entregas express/mes", value: "4,715", icon: ShoppingCart },
+    { label: "Express (Rappi Cargo)", value: "$59.99 MXN · 51:46 min E2E", icon: Route },
+    { label: "Fallback (DHL + 99min)", value: "3.82% que Rappi no cubre", icon: Route },
+    { label: "Distancia promedio", value: "3.83 km", icon: MapPin },
+    { label: "Tiendas con delivery", value: "~400 de 530", icon: Store },
   ];
 
   const financialAssumptions = [
-    { label: "Costo total flota (fijo)", value: "592.2M COP/mes" },
-    { label: "Costo unitario flota", value: "18,222 COP/entrega" },
-    { label: "Fee delivery al cliente", value: "4,000 COP/orden" },
-    { label: "Rappi promedio ponderado", value: "~8,800 COP/entrega" },
-    { label: "Factura Rappi actual", value: "154M COP/mes" },
+    { label: "Tarifa promedio Rappi", value: "$59.99 MXN/entrega" },
+    { label: "Gasto total Rappi", value: "$282,853 MXN/mes" },
+    { label: "Call center (4 agentes)", value: "$48,000 MXN/mes" },
+    { label: "Resolucion ticket cliente", value: "1.5 dias" },
+    { label: "Resolucion ticket proveedor", value: "7 dias" },
   ];
 
   const incidentAssumptions = [
-    { label: "Ticket promedio orden", value: "~55,000 COP" },
-    { label: "Tasa de incidencias Rappi", value: "1.5%" },
-    { label: "Recovery rate actual (manual)", value: "~50%" },
+    { label: "Sin repartidor asignado", value: "0.69%" },
+    { label: "Sin cobertura", value: "3.13%" },
+    { label: "Total entregas fallidas", value: "3.82% (180/mes)" },
+    { label: "Retornos (cliente ausente)", value: "5% (236/mes)" },
   ];
 
   return (
@@ -35,7 +36,7 @@ export const AssumptionsSlide = () => {
             Datos <span className="picker-highlight">confirmados</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground opacity-0 animate-fade-up animation-delay-200">
-            Numeros validados en la sesion del 11 de febrero
+            Numeros validados por el equipo de GNC (Feb 4, 2026)
           </p>
         </div>
 
@@ -89,28 +90,27 @@ export const AssumptionsSlide = () => {
               ))}
             </div>
 
-            <div className="mt-4 p-3 bg-accent/10 rounded-xl">
+            <div className="mt-4 p-3 bg-destructive/10 rounded-xl">
               <p className="text-xs text-muted-foreground">
-                <span className="font-semibold text-accent">Distribucion de distancias estimada:</span>
+                <span className="font-semibold text-destructive">130 tiendas sin delivery</span>
                 <br />
-                60% {"<"}3km · 25% 3-5km · 15% {">"}5km
+                25% de la red no tiene cobertura express
               </p>
             </div>
           </div>
         </div>
 
-        {/* Fleet productivity callout */}
+        {/* Key insight callout */}
         <div className="mt-4 stat-card p-4 border-2 border-destructive/30 opacity-0 animate-fade-up" style={{ animationDelay: '650ms' }}>
           <div className="flex items-start gap-3">
             <div className="w-9 h-9 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <Truck className="w-5 h-5 text-destructive" />
+              <AlertTriangle className="w-5 h-5 text-destructive" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-foreground">Productividad de flota: 5.2 entregas/dia por repartidor</p>
+              <p className="text-sm font-semibold text-foreground">Distancia promedio: 3.83 km — tarifa promedio: $59.99</p>
               <p className="text-xs text-muted-foreground mt-1">
-                El estandar de la industria es <span className="font-semibold text-foreground">12-18 entregas/dia</span>.
-                La flota esta rindiendo a <span className="font-semibold text-destructive">menos de un tercio</span> de su potencial.
-                Con 210 repartidores a 18/dia, la capacidad real es <span className="font-semibold text-foreground">113,400/mes</span> — mas del doble de lo necesario.
+                La mayoria de los envios son cortos, pero GNC depende de <span className="font-semibold text-destructive">un solo proveedor</span> sin
+                alternativa por distancia. Cuando Rappi no puede, el pedido baja a DHL (no express, sin tracking GPS).
               </p>
             </div>
           </div>
@@ -119,7 +119,7 @@ export const AssumptionsSlide = () => {
         <div className="mt-4 text-center opacity-0 animate-fade-up" style={{ animationDelay: '750ms' }}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-xl">
             <p className="text-sm text-muted-foreground">
-              Costo logistico total actual: <span className="font-semibold text-foreground">746.2M COP/mes</span> (592M flota + 154M Rappi)
+              Costo logistico total actual: <span className="font-semibold text-foreground">$426,053 MXN/mes</span> (proveedores + fallos + call center)
             </p>
           </div>
         </div>

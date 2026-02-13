@@ -1,4 +1,4 @@
-import { Package, MapPin } from "lucide-react";
+import { Package, Store } from "lucide-react";
 
 export const TitleSlide = () => {
   return (
@@ -13,11 +13,10 @@ export const TitleSlide = () => {
 
         {/* Client logo */}
         <div className="my-10 opacity-0 animate-scale-in animation-delay-100">
-          <img
-            src="/pasteur-logo.png"
-            alt="Farmacia Pasteur"
-            className="h-16 md:h-20 mx-auto object-contain"
-          />
+          <div className="flex items-center justify-center gap-3">
+            <span className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">GNC</span>
+            <span className="text-lg md:text-xl text-muted-foreground font-light">Mexico</span>
+          </div>
         </div>
 
         {/* Main title */}
@@ -27,7 +26,7 @@ export const TitleSlide = () => {
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground font-light mb-12 opacity-0 animate-fade-up animation-delay-300">
-          Menor costo por entrega, mayor control, mas eficiencia
+          Multi-proveedor inteligente, menor costo por entrega
         </p>
 
         {/* Scenario cards */}
@@ -36,23 +35,23 @@ export const TitleSlide = () => {
             <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
               <Package className="w-7 h-7 text-primary" />
             </div>
-            <p className="text-4xl md:text-5xl font-bold text-foreground">50,000</p>
+            <p className="text-4xl md:text-5xl font-bold text-foreground">4,715</p>
             <p className="text-muted-foreground mt-2">entregas/mes</p>
           </div>
 
           <div className="stat-card text-center">
             <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
-              <MapPin className="w-7 h-7 text-accent" />
+              <Store className="w-7 h-7 text-accent" />
             </div>
-            <p className="text-4xl md:text-5xl font-bold text-foreground">300+</p>
-            <p className="text-muted-foreground mt-2">puntos de venta</p>
+            <p className="text-4xl md:text-5xl font-bold text-foreground">530+</p>
+            <p className="text-muted-foreground mt-2">tiendas en Mexico</p>
           </div>
         </div>
 
         {/* Footer note */}
         <div className="mt-12 opacity-0 animate-fade-up" style={{ animationDelay: '600ms' }}>
           <p className="text-sm text-muted-foreground">
-            Escenario actual: Flota interna (35%) + Rappi (65%)
+            Escenario actual: 100% Rappi · $59.99 MXN promedio por entrega
           </p>
         </div>
       </div>

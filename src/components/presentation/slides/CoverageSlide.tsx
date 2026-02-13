@@ -1,13 +1,13 @@
 import { Globe } from "lucide-react";
 
 const countries = [
-  { name: "México", flag: "🇲🇽", position: "top-[18%] left-[12%]" },
-  { name: "Costa Rica", flag: "🇨🇷", position: "top-[38%] left-[18%]" },
-  { name: "Ecuador", flag: "🇪🇨", position: "top-[48%] left-[24%]" },
-  { name: "Perú", flag: "🇵🇪", position: "top-[56%] left-[26%]" },
-  { name: "Chile", flag: "🇨🇱", position: "top-[72%] left-[28%]" },
-  { name: "Colombia", flag: "🇨🇴", position: "top-[36%] left-[52%]" },
-  { name: "Uruguay", flag: "🇺🇾", position: "top-[70%] left-[52%]" },
+  { name: "Mexico", flag: "\ud83c\uddf2\ud83c\uddfd", position: "top-[18%] left-[12%]" },
+  { name: "Costa Rica", flag: "\ud83c\udde8\ud83c\uddf7", position: "top-[38%] left-[18%]" },
+  { name: "Ecuador", flag: "\ud83c\uddea\ud83c\udde8", position: "top-[48%] left-[24%]" },
+  { name: "Peru", flag: "\ud83c\uddf5\ud83c\uddea", position: "top-[56%] left-[26%]" },
+  { name: "Chile", flag: "\ud83c\udde8\ud83c\uddf1", position: "top-[72%] left-[28%]" },
+  { name: "Colombia", flag: "\ud83c\udde8\ud83c\uddf4", position: "top-[36%] left-[52%]" },
+  { name: "Uruguay", flag: "\ud83c\uddfa\ud83c\uddfe", position: "top-[70%] left-[52%]" },
 ];
 
 export const CoverageSlide = () => {
@@ -30,11 +30,11 @@ export const CoverageSlide = () => {
         <div className="grid md:grid-cols-2 gap-6 items-center">
           {/* Country list */}
           <div className="grid grid-cols-2 gap-3 opacity-0 animate-fade-up animation-delay-300">
-            {countries.map((country, index) => (
+            {countries.map((country) => (
               <div
                 key={country.name}
                 className={`stat-card p-4 flex items-center gap-3 ${
-                  country.name === "Colombia"
+                  country.name === "Mexico"
                     ? "border-2 border-accent/40 bg-accent/5"
                     : ""
                 }`}
@@ -42,11 +42,11 @@ export const CoverageSlide = () => {
                 <span className="text-2xl md:text-3xl">{country.flag}</span>
                 <div>
                   <p className={`font-semibold text-sm md:text-base ${
-                    country.name === "Colombia" ? "text-accent" : "text-foreground"
+                    country.name === "Mexico" ? "text-accent" : "text-foreground"
                   }`}>
                     {country.name}
                   </p>
-                  {country.name === "Colombia" && (
+                  {country.name === "Mexico" && (
                     <p className="text-xs text-accent">Tu mercado</p>
                   )}
                 </div>
@@ -63,8 +63,8 @@ export const CoverageSlide = () => {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="stat-card p-4 text-center">
-                <p className="text-2xl md:text-3xl font-bold" style={{ color: 'hsl(193 100% 45%)' }}>3</p>
-                <p className="text-xs text-muted-foreground mt-1">proveedores Tier 1 integrados</p>
+                <p className="text-2xl md:text-3xl font-bold" style={{ color: 'hsl(193 100% 45%)' }}>4</p>
+                <p className="text-xs text-muted-foreground mt-1">proveedores integrados en MX</p>
               </div>
               <div className="stat-card p-4 text-center">
                 <p className="text-2xl md:text-3xl font-bold" style={{ color: 'hsl(193 100% 45%)' }}>8+</p>
