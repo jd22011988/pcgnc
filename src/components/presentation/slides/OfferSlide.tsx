@@ -2,7 +2,7 @@ import { Check, ArrowRight, Shield, Zap } from "lucide-react";
 
 export const OfferSlide = () => {
   const features = [
-    "$4.50 MXN por envio orquestado",
+    "$5.00 MXN por envio orquestado",
     "$0 de setup — sin costo de implementacion",
     "Sin compromiso minimo (sin lock-in)",
     "Modulo Flows: ruteo automatico por distancia + horario",
@@ -54,7 +54,7 @@ export const OfferSlide = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-3 bg-secondary rounded-xl">
                 <span className="text-muted-foreground text-sm">Pagas</span>
-                <span className="text-lg font-bold text-primary">$21,218 MXN/mes</span>
+                <span className="text-lg font-bold text-primary">$23,575 MXN/mes</span>
               </div>
 
               <div className="flex justify-center">
@@ -68,8 +68,8 @@ export const OfferSlide = () => {
 
               <div className="pt-3 border-t border-border text-center">
                 <p className="text-xs text-muted-foreground mb-1">Ganancia neta mensual</p>
-                <p className="text-3xl font-bold text-accent">+$109,121 MXN</p>
-                <p className="text-xs text-muted-foreground mt-2">Con cobertura expandida: hasta +$175,000 MXN/mes</p>
+                <p className="text-3xl font-bold text-accent">+$106,764 MXN</p>
+                <p className="text-xs text-muted-foreground mt-2">Con cobertura expandida: hasta +$170,000 MXN/mes</p>
               </div>
             </div>
           </div>

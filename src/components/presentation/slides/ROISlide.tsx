@@ -9,7 +9,7 @@ export const ROISlide = () => {
             Resumen Financiero
           </span>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2 opacity-0 animate-fade-up animation-delay-100">
-            ROI: <span className="picker-highlight">5.1x</span>
+            ROI: <span className="picker-highlight">4.5x</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground opacity-0 animate-fade-up animation-delay-200">
             Beneficio desde el dia uno, sin inversion inicial
@@ -69,19 +69,19 @@ export const ROISlide = () => {
                 <span className="font-semibold text-accent">$36,000</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Picker ($4.50/envio)</span>
-                <span className="font-semibold">$21,218</span>
+                <span className="text-muted-foreground">Picker ($5.00/envio)</span>
+                <span className="font-semibold">$23,575</span>
               </div>
               <div className="flex justify-between pt-2 border-t border-border">
                 <span className="font-semibold">Total</span>
-                <span className="font-bold text-accent">$316,932</span>
+                <span className="font-bold text-accent">$319,289</span>
               </div>
             </div>
 
             <div className="mt-3 p-2 bg-accent/10 rounded-lg text-center">
               <p className="text-xs text-muted-foreground">Ahorro neto</p>
-              <p className="text-lg font-bold text-accent">+$109,121/mes</p>
-              <p className="text-xs text-accent font-medium">ROI 5.1x</p>
+              <p className="text-lg font-bold text-accent">+$106,764/mes</p>
+              <p className="text-xs text-accent font-medium">ROI 4.5x</p>
             </div>
           </div>
         </div>
@@ -93,8 +93,8 @@ export const ROISlide = () => {
               <Calendar className="w-5 h-5" />
               <span className="text-sm font-medium opacity-90">Impacto anual</span>
             </div>
-            <p className="text-4xl font-bold">+$1,309,452 MXN</p>
-            <p className="text-sm opacity-75 mt-1">~$68,000 USD/ano en ahorro neto</p>
+            <p className="text-4xl font-bold">+$1,281,168 MXN</p>
+            <p className="text-sm opacity-75 mt-1">~$66,000 USD/ano en ahorro neto</p>
           </div>
 
           <div className="bg-gradient-to-br from-accent to-accent/80 rounded-2xl p-5 text-white opacity-0 animate-scale-in" style={{ animationDelay: '700ms' }}>
@@ -102,15 +102,15 @@ export const ROISlide = () => {
               <TrendingUp className="w-5 h-5" />
               <span className="text-sm font-medium opacity-90">Con cobertura expandida (500+ tiendas)</span>
             </div>
-            <p className="text-4xl font-bold">+$2.2M MXN</p>
-            <p className="text-sm opacity-75 mt-1">~8,000 entregas/mes · ROI 5.1x</p>
+            <p className="text-4xl font-bold">+$2.04M MXN</p>
+            <p className="text-sm opacity-75 mt-1">~8,000 entregas/mes · ROI 4.5x</p>
           </div>
         </div>
 
         <div className="text-center mt-4 opacity-0 animate-fade-up" style={{ animationDelay: '800ms' }}>
           <p className="text-base text-muted-foreground">
             Por cada <span className="font-semibold text-foreground">$1 MXN</span> que pagas a Picker,
-            recuperas <span className="font-semibold text-accent">$5.10 MXN</span> en ahorro
+            recuperas <span className="font-semibold text-accent">$4.50 MXN</span> en ahorro
           </p>
         </div>
       </div>
